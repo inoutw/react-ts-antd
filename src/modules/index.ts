@@ -1,3 +1,3 @@
 import demo from './demo'
-import mall from './mall'
-export default [demo, mall]
+import dashboard from './dashboard'
+export default [demo, dashboard]

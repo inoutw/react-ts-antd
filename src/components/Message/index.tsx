@@ -6,13 +6,9 @@ interface MessagePreset {
   content: string
 }
 const presets: { [key: string]: MessagePreset } = {
-  'no-address': {
-    image: assets.empty.no_address,
-    content: '您还没有填写收货地址哦~',
-  },
-  'sold-out': {
+  'no-data': {
     image: assets.empty.no_data,
-    content: '商品过期不存在~',
+    content: '内容为空~',
   },
 }
 interface Props {

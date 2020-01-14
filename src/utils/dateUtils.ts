@@ -24,7 +24,7 @@ export function getDateTimeStamp(dateStr: string) {
   return Date.parse(dateStr.replace(/-/gi, '/'))
 }
 
-// 声音视频播放，将秒数转换分钟00:00:00格式
+// 将秒数转换分钟00:00:00格式
 export function timeToMinute(times: number) {
   var t
   if (times > -1) {

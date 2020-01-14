@@ -1,0 +1,32 @@
+.ant-layout-has-sider {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.ant-layout-sider {
+  display: inline-block;
+}
+.main-wrap {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  & header {
+    padding: 10px;
+  }
+  & main {
+  }
+}
+#root > .ant-layout {
+  min-height: 100vh;
+}
+.primary-content {
+}
+.user-menu {
+  & .logo-brand {
+    margin: 10px;
+  }
+  & .icon-brand {
+    color: #1ed41e;
+    font-size: 30px;
+  }
+}

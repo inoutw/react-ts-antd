@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { LoginVO } from 'api/platform-user'
+import { LoginVO } from 'api/user'
 import { withStore } from 'services/store'
 
 interface LoginInfo extends LoginVO {
@@ -11,6 +11,8 @@ interface LoginContext {
   logout(): void
 }
 const defaultLogin: LoginInfo = { isLogin: false }
+
+//WithLogin函数式组件
 export const WithLogin = withStore('login', defaultLogin)
 const LoginContext = React.createContext({} as LoginContext)
 export const useLoginContext = () => useContext(LoginContext)

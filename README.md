@@ -1,4 +1,9 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). using [react-app-rewired](https://github.com/timarney/react-app-rewired) to override(config-overrides.js) the default configuration without ejecting the project.
+
+以下是一些文件说明：
+
+- .vscode/settings.json: VSCode 编辑器配置文件，可以在保存的时候自动格式化代码
+- prettier.config.js: VSCode prettier 插件配置，根据该配置，保证代码风格一致，如果使用 VSCode 请下载相关插件
 
 ## Available Scripts
 

@@ -5,12 +5,12 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
 if (process.env.NODE_ENV !== "development") {
-  console.log = () => {
-    return;
-  };
-  window.addEventListener("unhandledrejection", err => {
-    err.preventDefault();
-  });
+	console.log = () => {
+		return;
+	};
+	window.addEventListener("unhandledrejection", err => {
+		err.preventDefault();
+	});
 }
 
 ReactDOM.render(<App />, document.getElementById("root"));

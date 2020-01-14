@@ -1,13 +1,18 @@
 import React from 'react'
-import 'services/transformSize'
 import { LoginProvider } from 'modules/user/LoginContext'
-import { RouterProvider } from 'services/route'
 import modules from 'modules'
+import 'antd/dist/antd.css'
+import { PrimaryLayout } from 'layout/PrimaryLayout'
+import { BrowserRouter, Switch } from 'react-router-dom'
 
 const App: React.FC = () => {
   return (
     <LoginProvider>
-      <RouterProvider modules={modules}></RouterProvider>
+      <BrowserRouter>
+        <Switch>
+          <PrimaryLayout modules={modules}></PrimaryLayout>
+        </Switch>
+      </BrowserRouter>
     </LoginProvider>
   )
 }
