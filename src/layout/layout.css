@@ -24,6 +24,8 @@
 .user-menu {
   & .logo-brand {
     margin: 10px;
+    color: #fff;
+    font-size: calc(12px + 0.5vmax);
   }
   & .icon-brand {
     color: #1ed41e;

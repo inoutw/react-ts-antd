@@ -2,11 +2,13 @@ import React, { useContext } from 'react'
 import { Layout, Menu, Icon } from 'antd'
 import { PrLayoutContext } from './PrimaryLayout'
 import { useLoginContext } from 'modules/user/LoginContext'
+import { useHistory } from 'react-router-dom'
 const { Header, Sider, Content } = Layout
 
 const PrimaryHeader: React.FC<{}> = () => {
   const prLayoutContext = useContext(PrLayoutContext)
   const loginContext = useLoginContext()
+  const history = useHistory()
   const logout = () => {
     loginContext.logout()
   }
