@@ -1,5 +1,5 @@
 import { Icon } from 'antd'
-const CSIcon = Icon.createFromIconfontCN({
-  scriptUrl: '//at.alicdn.com/t/font_1583469_o8e1ngygcmo.js',
+const MyIcon = Icon.createFromIconfontCN({
+  scriptUrl: '//at.alicdn.com/t/font_1613430_xtm33y14wsd.js',
 })
-export default CSIcon
+export default MyIcon

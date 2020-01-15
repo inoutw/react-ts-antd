@@ -6,6 +6,7 @@ import UserMenu from 'layout/UserMenu'
 import BasicLayout from './BasicLayout'
 import { useLoginContext } from 'modules/user/LoginContext'
 import UnauthLayout from './UnauthLayout'
+import PrimaryHeader from './PrimaryHeader'
 const { Header, Sider } = Layout
 
 interface PrLayoutContext {
@@ -13,14 +14,13 @@ interface PrLayoutContext {
   toggleCollapse(): void
 }
 
-const PrLayoutContext = React.createContext({} as PrLayoutContext)
-export default PrLayoutContext
+export const PrLayoutContext = React.createContext({} as PrLayoutContext)
 
 /**
  * @return
  * @param props modules array
  */
-export const PrimaryLayout: React.FC<{ modules: Module[] }> = props => {
+const PrimaryLayout: React.FC<{ modules: Module[] }> = props => {
   const [collapsed, setCollapsed] = useState(false)
   const loginContext = useLoginContext()
   const toggleCollapse = () => {
@@ -37,9 +37,7 @@ export const PrimaryLayout: React.FC<{ modules: Module[] }> = props => {
             <UserMenu />
           </Sider>
           <div className="main-wrap">
-            <Header style={{ background: '#fff' }}>
-              <Icon className="trigger" type={collapsed ? 'menu-unfold' : 'menu-fold'} onClick={toggleCollapse} />
-            </Header>
+            <PrimaryHeader />
             <BasicLayout modules={props.modules} />
           </div>
         </Layout>
@@ -47,3 +45,4 @@ export const PrimaryLayout: React.FC<{ modules: Module[] }> = props => {
     </PrLayoutContext.Provider>
   )
 }
+export default PrimaryLayout

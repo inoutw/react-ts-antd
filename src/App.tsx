@@ -2,8 +2,8 @@ import React from 'react'
 import { LoginProvider } from 'modules/user/LoginContext'
 import modules from 'modules'
 import 'antd/dist/antd.css'
-import { PrimaryLayout } from 'layout/PrimaryLayout'
 import { BrowserRouter, Switch } from 'react-router-dom'
+import PrimaryLayout from 'layout/PrimaryLayout'
 
 const App: React.FC = () => {
   return (

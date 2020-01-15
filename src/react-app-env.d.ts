@@ -1,6 +1,8 @@
 /// <reference types="react-scripts" />
 declare type Func<T = {}> = (value?: T) => void
 
+declare interface PageComponent<T> {}
+
 declare interface Route {
   path: string
   name: string

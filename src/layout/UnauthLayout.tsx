@@ -4,6 +4,7 @@ import { Layout, Icon } from 'antd'
 import './layout.css'
 import BasicLayout from './BasicLayout'
 import user from 'modules/user'
+import MyIcon from 'components/Icon'
 const { Header, Sider } = Layout
 
 /**
@@ -20,8 +21,10 @@ const UnauthLayout: React.FC<{ modules: Module[] }> = props => {
     <ReactRoute>
       <Layout>
         <Header style={{ background: '#fff' }}>
-          <Icon className="trigger" type={collapsed ? 'menu-unfold' : 'menu-fold'} onClick={toggleCollapse} />
-          360企业安全
+          <div className="brand-wrap">
+            <MyIcon type="icon-book" onClick={toggleCollapse} />
+            brand name
+          </div>
         </Header>
         <Redirect
           to={{

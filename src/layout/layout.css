@@ -30,3 +30,12 @@
     font-size: 30px;
   }
 }
+.ant-layout-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  & .logout-btn {
+    cursor: pointer;
+  }
+}
